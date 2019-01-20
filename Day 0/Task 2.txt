@@ -1,0 +1,10 @@
+passwordFile = open('SecretPasswordFile.txt')  #this line opens a '.txt' file where our secret password is stored as string
+secretPassword = passwordFile.read()  #this line reads the '.txt' file and stores it in a variable
+print('Enter your password.')  #prints "" onto the screen
+typedPassword = input()  #this line takes and stores the user input into a variable
+if typedPassword == secretPassword:   #if the user input is same as the secret password, the next line is executed
+	print('Access granted')
+if typedPassword == '12345':   #if the user input is 12345, the next line is executed
+	print('That password is one that an idiot puts on their luggage.')
+else:    # if the user inputs any other value then the next line is printed onto the screen
+	print('Access denied')
